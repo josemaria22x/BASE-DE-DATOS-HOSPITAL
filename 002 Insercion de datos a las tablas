@@ -1,0 +1,781 @@
+---INGRESO DE DATOS EN CADA TABLA--
+
+-- ingresamos datos a  la tabla genero
+insert into genero (NombreGenero) values 
+('Masculino'),('Femenino');
+select * from genero;
+
+-- ingresamos datos a  la tabla etnia
+insert into etnia (NombreEtnia) values 
+('Ladino'),('Mestizo');
+select * from etnia;
+
+-- ingresamos datos a  la tabla idioma
+insert into idioma (NombreIdioma) values 
+('Castellano'),('Xinka'),('Garífuna'),('Akateko'),
+('Awakateko'),('Chuj'),('Itza'),('Ixil'),('Kaqchikel'),
+('Mam'),('Mopán'),('Popti'),('Poqomam'),('Poqomchi'),
+('Sakapulteko'),('Sipakapense'),('Tektiteko');
+select * from idioma;
+
+-- ingresamos datos a  la tabla profesionpersona
+insert into profesionpersona (NombreProfesion) values 
+('Perito contador'),
+('Perito en administración de empresas'),
+('Bachiller industrial'),
+('Perito en mecánica automotriz'),
+('Bachiller en electrónica'),
+('Bachiller en ciencias y letras'),
+('Magisterio infantil'),
+('Bachiller en computación');
+select * from profesionpersona;
+
+
+-- ingresamos datos a  la tabla tiposangre
+insert into tiposangre (NombreTipoSangre) values 
+('O negativo'),('O positivo'),
+('A negativo'),('A positivo'),
+('B negativo'),('B positivo'),
+('AB negativo'),('AB positivo');
+select * from tiposangre;
+
+-- ingresamos datos a  la tabla estadocivil
+insert into estadocivil (NombreEstadoCivil) values 
+('Soltero(a)'),('Casado(a)'),('Viudo(a)');
+select * from estadocivil;
+
+-- ingresamos datos a la tabla departamento
+insert into departamento (NombreDepartamento) values
+('Alta Verapaz'),('Baja Verapaz'),
+('Chimaltenango'),('Chiquimula'),
+('El Progreso'),('Escuintla'),
+('Guatemala'),('Huehuetenango'),
+('Izabal'),('Jalapa'),
+('Jutiapa'),('Petén'),
+('Quetzaltenango'),('Quiché'),
+('Retalhuleu'),('Sacatepéquez'),
+('San Marcos'),('Santa Rosa'),
+('Solola'),('Suchitepéquez'),
+('Totonicapán'),('Zacapa');
+
+select * from departamento;
+-- ingresamos datos a la tabla municipio
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Chahal',1),
+('Chisec',1),
+('Cobán',1),
+('Fray Bartolomé de las Casas',1),
+('La Tinta',1),
+('Lanquín',1),
+('Panzós',1),
+('Raxruhá',1),
+('San Cristóbal Verapaz',1),
+('San Juan Chamelco',1),
+('San Pedro Carchá',1),
+('Santa Cruz Verapaz',1),
+('Santa María Cahabón',1),
+('Senahú',1),
+('Tamahú',1),
+('Tactic',1),
+('Tucurú',1);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Cubulco',2),
+('Granados',2),
+('Purulhá',2),
+('Rabinal',2),
+('Salamá',2),
+('San Jerónimo',2),
+('San Miguel Chicaj',2),
+('Santa Cruz el Chol',2);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Acatenango',3),
+('Chimaltenango',3),
+('El Tejar',3),
+('Parramos',3),
+('Patzicía',3),
+('Patzún',3),
+('Pochuta',3),
+('San Andrés Itzapa',3),
+('San José Poaquíl',3),
+('San Juan Comalapa',3),
+('San Martín Jilotepeque',3),
+('Santa Apolonia',3),
+('Santa Cruz Balanyá',3),
+('Tecpán',3),
+('Yepocapa',3),
+('Zaragoza',3);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Camotán',4),
+('Chiquimula',4),
+('Concepción Las Minas',4),
+('Esquipulas',4),
+('Ipala',4),
+('Jocotán',4),
+('Olopa',4),
+('Quezaltepeque',4),
+('San Jacinto',4),
+('San José la Arada',4),
+('San Juan Ermita',4);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('El Jícaro',5),
+('Guastatoya',5),
+('Morazán',5),
+('San Agustín Acasaguastlán',5),
+('San Antonio La Paz',5),
+('San Cristóbal Acasaguastlán',5),
+('Sanarate',5),
+('Sansare',5);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Escuintla',6),
+('Guanagazapa',6),
+('Iztapa',6),
+('La Democracia',6),
+('La Gomera',6),
+('Masagua',6),
+('Nueva Concepción',6),
+('Palín',6),
+('San José',6),
+('San Vicente Pacaya',6),
+('Santa Lucía Cotzumalguapa',6),
+('Siquinalá',6),
+('Tiquisate',6);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Amatitlán',7),
+('Chinautla',7),
+('Chuarrancho',7),
+('Guatemala',7),
+('Fraijanes',7),
+('Mixco',7),
+('Palencia',7),
+('San José del Golfo',7),
+('San José Pinula',7),
+('San Juan Sacatepéquez',7),
+('San Miguel Petapa',7),
+('San Pedro Ayampuc',7),
+('San Pedro Sacatepéquez',7),
+('San Raymundo',7),
+('Santa Catarina Pinula',7),
+('Villa Canales',7),
+('Villa Nueva',7);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Aguacatán',8),
+('Chiantla',8),
+('Colotenango',8),
+('Concepción Huista',8),
+('Cuilco',8),
+('Huehuetenango',8),
+('Jacaltenango',8),
+('La Democracia',8),
+('La Libertad',8),
+('Malacatancito',8),
+('Nentón',8),
+('San Antonio Huista',8),
+('San Gaspar Ixchil',8),
+('San Ildefonso Ixtahuacán',8),
+('San Juan Atitán',8),
+('San Juan Ixcoy',8),
+('San Mateo Ixtatán',8),
+('San Miguel Acatán',8),
+('San Pedro Nécta',8),
+('San Pedro Soloma',8),
+('San Rafael La Independencia',8),
+('San Rafael Pétzal',8),
+('San Sebastián Coatán',8),
+('San Sebastián Huehuetenango',8),
+('Santa Ana Huista',8),
+('Santa Bárbara',8),
+('Santa Cruz Barillas',8),
+('Santa Eulalia',8),
+('Santiago Chimaltenango',8),
+('Tectitán',8),
+('Todos Santos Cuchumatán',8),
+('Unión Cantinil',8);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('El Estor',9),
+('Livingston',9),
+('Los Amates',9),
+('Morales',9),
+('Puerto Barrios',9);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Jalapa',10),
+('Mataquescuintla',10),
+('Monjas',10),
+('San Carlos Alzatate',10),
+('San Luis Jilotepeque',10),
+('San Manuel Chaparrón',10),
+('San Pedro Pinula',10);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Agua Blanca',11),
+('Asunción Mita',11),
+('Atescatempa',11),
+('Comapa',11),
+('Conguaco',11),
+('El Adelanto',11),
+('El Progreso',11),
+('Jalpatagua',11),
+('Jerez',11),
+('Jutiapa',11),
+('Moyuta',11),
+('Pasaco',11),
+('Quesada',11),
+('San José Acatempa',11),
+('Santa Catarina Mita',11),
+('Yupiltepeque',11),
+('Zapotitlán',11);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Dolores',12),
+('El Chal',12),
+('Ciudad Flores',12),
+('La Libertad',12),
+('Las Cruces',12),
+('Melchor de Mencos',12),
+('Poptún',12),
+('San Andrés',12),
+('San Benito',12),
+('San Francisco',12),
+('San José',12),
+('San Luis',12),
+('Santa Ana',12),
+('Sayaxché',12);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Almolonga',13),
+('Cabricán',13),
+('Cajolá',13),
+('Cantel',13),
+('Coatepeque',13),
+('Colomba Costa Cuca',13),
+('Concepción Chiquirichapa',13),
+('El Palmar',13),
+('Flores Costa Cuca',13),
+('Génova',13),
+('Huitán',13),
+('La Esperanza',13),
+('Olintepeque',13),
+('Palestina de Los Altos',13),
+('Quetzaltenango',13),
+('Salcajá',13),
+('San Carlos Sija',13),
+('San Francisco La Unión',13),
+('San Juan Ostuncalco',13),
+('San Martín Sacatepéquez',13),
+('San Mateo',13),
+('San Miguel Sigüilá',13),
+('Sibilia',13),
+('Zunil',13);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Canillá',14),
+('Chajul',14),
+('Chicamán',14),
+('Chiché',14),
+('Chichicastenango',14),
+('Chinique',14),
+('Cunén',14),
+('Ixcán Playa Grande',14),
+('Joyabaj',14),
+('Nebaj',14),
+('Pachalum',14),
+('Patzité',14),
+('Sacapulas',14),
+('San Andrés Sajcabajá',14),
+('San Antonio Ilotenango',14),
+('San Bartolomé Jocotenango',14),
+('San Juan Cotzal',14),
+('San Pedro Jocopilas',14),
+('Santa Cruz del Quiché',14),
+('Uspantán',14),
+('Zacualpa',14);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Champerico',15),
+('El Asintal',15),
+('Nuevo San Carlos',15),
+('Retalhuleu',15),
+('San Andrés Villa Seca',15),
+('San Felipe Reu',15),
+('San Martín Zapotitlán',15),
+('San Sebastián',15),
+('Santa Cruz Muluá',15);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Alotenango',16),
+('Ciudad Vieja',16),
+('Jocotenango',16),
+('Antigua Guatemala',16),
+('Magdalena Milpas Altas',16),
+('Pastores',16),
+('San Antonio Aguas Calientes',16),
+('San Bartolomé Milpas Altas',16),
+('San Lucas Sacatepéquez',16),
+('San Miguel Dueñas',16),
+('Santa Catarina Barahona',16),
+('Santa Lucía Milpas Altas',16),
+('Santa María de Jesús',16),
+('Santiago Sacatepéquez',16),
+('Santo Domingo Xenacoj',16),
+('Sumpango',16);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Ayutla',17),
+('Catarina',17),
+('Comitancillo',17),
+('Concepción Tutuapa',17),
+('El Quetzal',17),
+('El Tumbador',17),
+('Esquipulas Palo Gordo',17),
+('Ixchiguán',17),
+('La Blanca',17),
+('La Reforma',17),
+('Malacatán',17),
+('Nuevo Progreso',17),
+('Ocós',17),
+('Pajapita',17),
+('Río Blanco',17),
+('San Antonio Sacatepéquez',17),
+('San Cristóbal Cucho',17),
+('San José El Rodeo',17),
+('San José Ojetenam',17),
+('San Lorenzo',17),
+('San Marcos',17),
+('San Miguel Ixtahuacán',17),
+('San Pablo',17),
+('San Pedro Sacatepéquez',17),
+('San Rafael Pie de la Cuesta',17),
+('Sibinal',17),
+('Sipacapa',17),
+('Tacaná',17),
+('Tajumulco',17),
+('Tejutla',17);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Barberena',18),
+('Casillas',18),
+('Chiquimulilla',18),
+('Cuilapa',18),
+('Guazacapán',18),
+('Nueva Santa Rosa',18),
+('Oratorio',18),
+('Pueblo Nuevo Viñas',18),
+('San Juan Tecuaco',18),
+('San Rafael las Flores',18),
+('Santa Cruz Naranjo',18),
+('Santa María Ixhuatán',18),
+('Santa Rosa de Lima',18),
+('Taxisco',18);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Concepción',19),
+('Nahualá',19),
+('Panajachel',19),
+('San Andrés Semetabaj',19),
+('San Antonio Palopó',19),
+('San José Chacayá',19),
+('San Juan La Laguna',19),
+('San Lucas Tolimán',19),
+('San Marcos La Laguna',19),
+('San Pablo La Laguna',19),
+('San Pedro La Laguna',19),
+('Santa Catarina Ixtahuacán',19),
+('Santa Catarina Palopó',19),
+('Santa Clara La Laguna',19),
+('Santa Cruz La Laguna',19),
+('Santa Lucía Utatlán',19),
+('Santa María Visitación',19),
+('Santiago Atitlán',19),
+('Sololá',19);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Chicacao',20),
+('Cuyotenango',20),
+('Mazatenango',20),
+('Patulul',20),
+('Pueblo Nuevo',20),
+('Río Bravo',20),
+('Samayac',20),
+('San Antonio Suchitepéquez',20),
+('San Bernardino',20),
+('San Francisco Zapotitlán',20),
+('San Gabriel',20),
+('San José El Idolo',20),
+('San José La Maquina',20),
+('San Juan Bautista',20),
+('San Lorenzo',20),
+('San Miguel Panán',20),
+('San Pablo Jocopilas',20),
+('Santa Bárbara',20),
+('Santo Domingo Suchitepéquez',20),
+('Santo Tomás La Unión',20),
+('Zunilito',20);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Momostenango',21),
+('San Andrés Xecul',21),
+('San Bartolo',21),
+('San Cristóbal Totonicapán',21),
+('San Francisco El Alto',21),
+('Santa Lucía La Reforma',21),
+('Santa María Chiquimula',21),
+('Totonicapán',21);
+
+insert into municipio (NombreMunicipio,idDepartamento) values
+('Cabañas',22),
+('Estanzuela',22),
+('Gualán',22),
+('Huité',22),
+('La Unión',22),
+('Río Hondo',22),
+('San Diego',22),
+('San Jorge',22),
+('Teculután',22),
+('Usumatlán',22),
+('Zacapa',22);
+
+select * from municipio;
+
+
+
+
+
+
+
+-- ingresamos direcciones a la tabla direccion
+insert into direccion(Calle,Colonia_Sector,idMunicipio) values
+('Calle 12','Colonia el prado',23),
+('Calle 34','Colonia Santa elena',67),
+('Calle 33','Colonia San Jose',89),
+('Calle 22','Colonia San Martin',22),
+('Calle 32','Colonia Jorge',1),
+('Calle 54','Colonia El paso',4),
+('Calle 11','Colonia el esfuerzo',15),---ACA CONTINUO
+('Calle 14','Colonia san isidro',54),---CONTINUACION
+('Calle 04','Colonia san josecito',25),
+('Calle 20','Colonia fegua',65),
+('Calle 39','Colonia la llovizna',58),
+('Calle 56','Colonia fraternidad',47),
+('Calle 24','Colonia el tractorcito',45),
+('Calle 78','Colonia los patos',25),
+('Calle 14','Colonia los delfines',74),
+('Calle 15','Colonia los angeles',47),
+('Calle 10','Colonia el venado',14),
+('Calle 25','Colonia los alcidez',56),
+('Calle 19','Colonia flamencos',74),
+('Calle 32','Colonia flamencos 2',27),
+('Calle 38','Colonia el samala',29),
+('Calle 45','Colonia el pedregal 1',1),
+('Calle 02','Colonia el pedregal 2',25),
+('Calle 09','Colonia el retro',26),
+('Calle 05','Colonia san angel',54),
+('Calle 11','Colonia trigales',22),
+('Calle 23','Colonia el almendro 2',58),
+('Calle 56','Colonia la independencia',56),
+('Calle 28','Colonia san fermin',66),
+('Calle 61','Colonia san benito',44),
+('Calle 57','Colonia el peru',78),
+('Calle 60','Colonia el carmen',70),
+('Calle 02','Colonia santa clara',70),
+('Calle 08','Colonia las vegas',46),
+('Calle 25','Colonia los cocos',29),
+('Calle 40','Colonia el ocos',33),
+('Calle 41','Colonia santa rita 1',25),
+('Calle 14','Colonia las asiendas',35),
+('Calle 77','Colonia el cairo',65),
+('Calle 87','Colonia el paquecito',45),
+('Calle 90','Colonia san josue',44),
+('Calle 26','Colonia el por venir',39),
+('Calle 07','Colonia el messi',17),
+('Calle 44','Colonia palmeras',55),
+('Calle 45','Colonia villa delfi',60),
+('Calle 08','Colonia las marias',55),
+('Calle 17','Colonia la democracia',10),
+('Calle 25','Colonia la esperanza',25),
+('Calle 23','Colonia san judas',17),
+('Calle 40','Colonia bella vista',25);
+select * from direccion;
+-- ingresamos datos a  la tabla paciente
+insert into paciente (DNI,Nombre,Apellido,Telefono,FechaNacimiento,idDireccion,idIdioma,idEtnia,idGenero,idEstadoCivil,idProfesion,idTipoSangre) values
+('1122336655','Juan','Sanchez','12557788','1999-02-12',          1,9,1,1,1,3,2),
+('2423424244','Josue','Sanchez','16487532','1999-02-12',       2,14,2,1,1,7,7),
+('2342424222','Juan','Sanchez','20518477','1999-02-12',     3,13,1,1,3,2,2),
+('6464646464','Dylan','Sanchez','30629944','1999-02-12',        4,11,1,1,1,5,1),
+('8978979879','Armando','Miranda','11112215','1999-02-12',      5,2,2,1,2,4,8),
+('1967535377','Nicodemo','Ixcot','92378461','1999-02-12',        6,3,2,1,2,7,5),--- AQUI ME QUEDE
+('5020046462','Julio','Ramirez','74851236','1999-02-12',         6,5,2,1,2,5,2), ---CONTINUACION
+('1433677443','Emilia','Tanner','78942514','1999-02-12',      8,9,1,2,3,1,8),
+('1108294909','David','Yancor','14527896','1999-02-12',        1,4,1,1,2,8,5),
+('1178293520','Emilio','Alfaro','58796423','1999-02-12',          6,3,2,1,2,8,5),
+('1286397364','Jose','Ralac','78451678','1999-02-12',           6,3,2,1,2,2,3),
+('6449393666','Dulce','Loranca','78526798','1999-02-12',      9,6,2,2,3,2,6),
+('2232943657','Raul','Diaz','78578598','1999-02-12',     7,8,1,1,2,4,8),
+('4704643304','Nicolas','Perez','12345678','1999-02-12',     1,7,1,1,1,4,2),
+('4430838266','Raquel','Lopez','78451245','1999-02-12',         1,10,2,2,3,6,5),
+('4507913374','Monica','Aguilar','24569875','1999-02-12',   15,10,2,2,2,6,1),
+('8540266007','Sofia','Mazariegos','78458974','1999-02-12',         25,13,2,2,1,5,2),
+('6644486697','Rolman','Gomez','78585669','1999-02-12',          30,7,1,1,3,5,4),
+('7639011218','Erick','Lopez','85462547','1999-02-12',        2,5,2,1,2,6,2),
+('3995004827','Alejandro','Ralac','45695658','1999-02-12',     1,4,1,1,2,8,5),
+('5891581179','Alejandro','Rabanales','85782563','1999-02-12',         6,3,2,1,2,8,5),
+('5083156278','Dulce','Solis','12453656','1999-02-12',         25,13,2,2,1,5,2),
+('4194197789','Dinora','Garcia','85564787','1999-02-12',    15,10,2,2,2,6,1),
+('2020681147','Ericka','Rodas','25456578','1999-02-12',        9,6,2,2,3,2,6),
+('2393226309','Erick','Lara','25456558','1999-02-12',           2,5,2,1,2,6,2),
+('2296432427','Jonathan','Paz','23654558','1999-02-12',      2,9,1,1,3,5,6),
+('9024481997','Oswaldo','Jerez','23565898','1999-02-12',      10,11,1,1,1,2,7),
+('9660690168','Nicolas','Campos','12455878','1999-02-12',   20,8,1,1,2,1,2),
+('3538814333','Juan','Campos','56584571','1999-02-12',      14,10,1,1,1,5,3),
+('9077426605','Glenda','Perez','12235658','1999-02-12',        4,9,2,2,3,1,6),
+('2647325566','Gloria','Aguilar','12454789','1999-02-12',     4,9,2,2,3,1,6),
+('6396293918','Joel','Esquite','23455896','1999-02-12',       10,11,1,1,1,2,7),
+('1891530065','Francisco','Jimenez','23565845','1999-02-12',    10,11,1,1,1,2,7),
+('9570979536','Gilberto','Perez ','24555565','1999-02-12',       20,8,1,1,2,1,2),
+('8406671928','Enrique','Font','12455658','1999-02-12',     14,10,1,1,1,5,3),
+('1119184139','Cyndy','Gramajo','25655898','1999-02-12',      15,10,2,2,2,6,1),
+('1096082940','Allan','Mendez','25654785','1999-02-12',      5,2,2,1,2,4,8),
+('9275123589','Izabel','Ralac','25635658','1999-02-12',         8,9,1,2,3,1,8),
+('7104855418','Angelica','Escobar','12455856','1999-02-12',   8,9,1,2,3,1,8),
+('2953328307','Abner','Valiente','12453656','1999-02-12',        2,14,2,1,1,7,7),
+('6555198218','Emiliana','Jerez ','12455878','1999-02-12',    9,6,2,2,3,2,6),
+('3145771309','Jairo','Ramirez','12457896','1999-02-12',         6,3,2,1,2,8,5),
+('3358676848','Hector','Batres','12456569','1999-02-12',    2,14,2,1,1,7,7),
+('1058803029','Jose','Yac','12456558','1999-02-12',             2,14,2,1,1,7,7),
+('3313583427','Stephanie','Arias','12587856','1999-02-12', 15,10,2,2,2,6,1),
+('6607213899','Abner','Rabanales','12587896','1999-02-12',   6,3,2,1,2,8,5),
+('1033136587','Dulce','Estrada','12455856','1999-02-12',   15,10,2,2,2,6,1),
+('6934445448','Jorge','Solano','12455898','1999-02-12',         1,4,1,1,2,8,5),
+('1147804392','Julio','Ramirez','12456956','1999-02-12',    6,3,2,1,2,8,5),
+('2207179619','Abel','Juarez','25655898','1999-02-12',           1,4,1,1,2,8,5);
+select * from paciente;
+ 
+-- ingresamos datos a  la tabla tipogravedad
+insert into tipogravedad(NombreTipoGravedad) values
+('Emergencia Vital'),
+('Emergencia Evidente'),
+('Urgencia'),
+('Urgencia Leve'),
+('Consulta General');
+select * from tipogravedad;
+
+-- ingresamos datos a  la tabla historia
+insert into historia(FechaEntrada,FechaAlta,idPaciente,idTipoGravedad) values
+('2020-01-12','2020-01-23',51,5),
+('2020-01-15','2020-01-17',60,4),
+('2020-01-20','2020-01-22',70,1),
+('2020-01-11','2020-01-15',80,2),
+('2020-01-05','2020-01-10',90,3),
+('2020-01-23','2020-01-26',95,1);
+select * from historia;
+
+-- ingresamos datos a  la tabla planta
+insert into planta(NombrePlanta,NumeroHabitaciones) values
+('Piso 1',10),
+('Piso 2',10),
+('Piso 3',10),
+('Piso 4',10),
+('Piso 5',10);
+select * from planta;
+
+-- ingresamos datos a  la tabla habitacion
+insert into habitacion(NumeroCamas,idPlanta) values
+(12,1),
+(11,1),
+(16,1),
+(11,2),
+(12,2),
+(11,3),
+(10,4),
+(10,5);
+select * from habitacion;
+
+-- ingresamos datos a  la tabla tipocama
+insert into tipocama(NombreTipoCama) values
+('Cama rígida'),
+('Cama articulada'),
+('Cama ortopédica, traumatológica'),
+('Cama electrocircular o de Stryker'),
+('Cama libro'),
+('Cama de levitación o cama clinitron'),
+('Cama roto-test'),
+('Cama Gatch');
+select * from tipocama;
+
+
+
+-- ingresamos datos a  la tabla cama
+insert into cama(idHabitacion,idTipoCama) values
+(7,1),
+(7,2),
+(6,3),
+(6,4),
+(5,5),
+(5,6),
+(4,4),
+(3,5);
+select * from cama;
+
+
+-- ingresamos datos a  la tabla pacientecama
+insert into pacientecama(FechaAsignacion,idCama,idHistoria) values
+('2020-01-12',1,5),
+('2020-01-15',2,6),
+('2020-01-20',3,7),
+('2020-01-11',5,8),
+('2020-01-05',4,9),
+('2020-01-23',6,10);
+select * from pacientecama;
+
+
+
+-- ingresamos datos a  la tabla diagnostico
+insert into diagnostico(NombreDiagnostico) values
+('Neumonia'),('Insuficiencia renal'),
+('Fiebre alta'),('Gastroenteritis'),
+('Infarto'),('Hemorragia interna');
+select * from diagnostico;
+
+-- ingresamos datos a  la tabla cargo
+insert into cargo(NombreCargo,Sueldo) values
+('Adjunto',7000),('Jefe de Sección',12000),
+('Jefe de Planta',9000);
+select * from cargo;
+
+-- ingresamos datos a  la tabla profesionmedico
+insert into profesionmedico(NombreProfesion) values
+('Médico cirujano');
+select * from profesionmedico;
+
+-- ingresamos datos a  la tabla jornada
+insert into jornada(NombreJornada) values
+('Diurna'),
+('Nocturna'),
+('Mixta');
+select * from jornada;
+
+-- ingresamos datos a  la tabla categoriaespecialidad
+insert into categoriaespecialidad(NombreCategoriaEspecialidad) values
+('Especialidades clínicas'),
+('Especialidades quirúrgicas'),
+('Especialidades médico-quirúrgicas'),
+('Especialidades de laboratorio o diagnósticas');
+select * from categoriaespecialidad;
+
+-- ingresamos datos a  la tabla especialidad
+insert into especialidad(NombreEspecialidad,idCategoriaEspecialidad) values
+('Alergología',1),('Cirugía cardíaca',2),('Dermatología',3),('Análisis clínico',4),
+('Anestesiología',1),('Cirugía general',2),('Oftalmología',3),('Anatomía patológica',4),
+('Cardiología',1),('Cirugía ortopédica',2),('Otorrinolaringología',3),('Farmacología',4),
+('Epidemiología',1),('Cirugía pediátrica',2),('Traumatología',3),('Inmunología',4);
+select * from especialidad;
+
+-- ingresamos datos a  la tabla medico
+insert into medico(Nombre,Apellido,No_Colegiado,idEspecialidad,idProfesion,idCargo,idJornada) values
+('Luis David','Miranda Lopez','4564',2,1,1,1),
+('Marily Linda','Tojil Tojil','1234',4,1,1,1),
+('Adriana Mariana','Soltera Sola','1202',5,1,2,3),
+('Gerson David','Juarez Jorges','7871',7,1,3,3);
+select * from medico;
+
+-- ingresamos datos a  la tabla visitamedica
+insert into visitamedica(FechaVisita,idPacienteCama,idMedico,idDiagnostico) values
+('2020-01-12',2,1,5),
+('2020-01-15',3,2,4),
+('2020-01-20',4,3,1),
+('2020-01-11',5,4,2),
+('2020-01-05',6,2,3),
+('2020-01-23',7,3,1);
+select * from visitamedica;
+
+
+
+
+Ingreso de datos en tabla pacientes copia con error
+
+
+-- ingresamos datos a  la tabla paciente
+insert into paciente (DNI,Nombre,Apellido,Telefono,FechaNacimiento,idDireccion,idIdioma,idEtnia,idGenero,idEstadoCivil,idProfesion,idTipoSangre) values
+('1122336655','Juan Jose','Sanchez Lopez','12557788','1999-02-12',          1,9,1,1,1,3,2),
+('2423424244','Josue David','Sanchez Lopez','16487532','1999-02-12',       2,14,2,1,1,7,7),
+('2342424222','Juan Manuel','Sanchez Linares','20518477','1999-02-12',     3,13,1,1,3,2,2),
+('6464646464','Dylan Jose','Sanchez Lopez','30629944','1999-02-12',        4,11,1,1,1,5,1),
+('8978979879','Armando Lucas','Miranda Paz','11112215','1999-02-12',      5,2,2,1,2,4,8),
+('1967535377','Nicodemo Juan','Ixcot Lopez','92378461','1999-02-12',        6,3,2,1,2,7,5),--- AQUI ME QUEDE
+('5020046462','Julio David','Ramirez Ruiz','74851236','1999-02-12',         6,5,2,1,2,5,2), ---CONTINUACION
+('1433677443','Emilia Liliana','Tanner Gomez','78942514','1999-02-12',      8,9,1,2,3,1,8),
+('1108294909','David Luis','Yancor Vasquez','14527896','1999-02-12',        1,4,1,1,2,8,5),
+('1178293520','Emilio Luis','Alfaro Lima','58796423','1999-02-12',          6,3,2,1,2,8,5),
+('1286397364','Jose Maria','Ralac Ajtun','78451678','1999-02-12',           6,3,2,1,2,2,3),
+('6449393666','Dulce Maria','Loranca Aguilar','78526798','1999-02-12',      9,6,2,2,3,2,6),
+('2232943657','Raul Alberto','Diaz Paz','78578598','1999-02-12',     7,8,1,1,2,4,8),
+('4704643304','Nicolas Benito','Perez Vasquez','12345678','1999-02-12',     1,7,1,1,1,4,2),
+('4430838266','Raquel Maria','Lopez Ixcot','78451245','1999-02-12',         1,10,2,2,3,6,5),
+('4507913374','Monica Sofia','Aguilar Diaz','24569875','1999-02-12',   15,10,2,2,2,6,1),
+('8540266007','Sofia Leticia','Mazariegos','78458974','1999-02-12',         25,13,2,2,1,5,2),
+('6644486697','Rolman Joel','Gomez Xiloj','78585669','1999-02-12',          30,7,1,1,3,5,4),
+('7639011218','Erick David','Lopez Minerva','85462547','1999-02-12',        2,5,2,1,2,6,2),
+('3995004827','Alejandro Manuel','Ralac Ajtun','45695658','1999-02-12',     1,4,1,1,2,8,5),
+('5891581179','Alejandro Joel','Rabanales Diaz','85782563','1999-02-12',         6,3,2,1,2,8,5),
+('5083156278','Dulce Maria','Solis Garcia','12453656','1999-02-12',         25,13,2,2,1,5,2),
+('4194197789','Dinora Heidy','Garcia Lopez','85564787','1999-02-12',    15,10,2,2,2,6,1),
+('2020681147','Ericka Julisa','Rodas Lopez','25456578','1999-02-12',        9,6,2,2,3,2,6),
+('2393226309','Erick Daniel','Lara Leon','25456558','1999-02-12',           2,5,2,1,2,6,2),
+('2296432427','Jonathan David','Paz Raymundo','23654558','1999-02-12',      2,9,1,1,3,5,6),
+('9024481997','Oswaldo Mynor','Jerez Alvarez','23565898','1999-02-12',      10,11,1,1,1,2,7),
+('9660690168','Nicolas David','Campos Lopez','12455878','1999-02-12',   20,8,1,1,2,1,2),
+('3538814333','Juan Carlos','Campos Gonzalez','56584571','1999-02-12',      14,10,1,1,1,5,3),
+('9077426605','Glenda Nohemi','Perez Lopez','12235658','1999-02-12',        4,9,2,2,3,1,6),
+('2647325566','Gloria Maria','Aguilar Barrera','12454789','1999-02-12',     4,9,2,2,3,1,6),
+('6396293918','Joel Emilio','Esquite Yancor','23455896','1999-02-12',       10,11,1,1,1,2,7),
+('1891530065','Francisco Jose','Jimenez Alonzo','23565845','1999-02-12',    10,11,1,1,1,2,7),
+('9570979536','Gilberto David','Perez Perez','24555565','1999-02-12',       20,8,1,1,2,1,2),
+('8406671928','Enrique Elias','Font Eggleston','12455658','1999-02-12',     14,10,1,1,1,5,3),
+('1119184139','Cyndy Maria','Gramajo Aguilar','25655898','1999-02-12',      15,10,2,2,2,6,1),
+('1096082940','Allan Adalberto','Mendez Cael','25654785','1999-02-12',      5,2,2,1,2,4,8),
+('9275123589','Izabel Maria','Ralac Ixcot','25635658','1999-02-12',         8,9,1,2,3,1,8),
+('7104855418','Angelica Dulce','Escobar Santizo','12455856','1999-02-12',   8,9,1,2,3,1,8),
+('2953328307','Abner Joel','Valiente Lopez','12453656','1999-02-12',        2,14,2,1,1,7,7),
+('6555198218','Emiliana Jimena','Jerez Ramirez','12455878','1999-02-12',    9,6,2,2,3,2,6),
+('3145771309','Jairo Raul','Ramirez Lopez','12457896','1999-02-12',         6,3,2,1,2,8,5),
+('3358676848','Hector Emanuel','Batres Aguilar','12456569','1999-02-12',    2,14,2,1,1,7,7),
+('1058803029','Jose Mario','Yac Arias','12456558','1999-02-12',             2,14,2,1,1,7,7),
+('3313583427','Stephanie Pamela','Arias Hernandez','12587856','1999-02-12', 15,10,2,2,2,6,1),
+('6607213899','Abner Antonio','Rabanales AK','12587896','1999-02-12',   6,3,2,1,2,8,5),
+('1033136587','Dulce Fernanda','Estrada Alfonso','12455856','1999-02-12',   15,10,2,2,2,6,1),
+('6934445448','Jorge Mario','Solano Lopez','12455898','1999-02-12',         1,4,1,1,2,8,5),
+('1147804392','Julio Cesar','Ramirez Paz','12456956','1999-02-12',    6,3,2,1,2,8,5),
+('2207179619','Abel Joel','Juarez Lopez','25655898','1999-02-12',           1,4,1,1,2,8,5);
+select * from paciente;
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
