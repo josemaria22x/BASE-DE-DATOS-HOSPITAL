@@ -1,0 +1,311 @@
+--
+-- Table structure for table genero
+--
+
+CREATE TABLE genero (
+  idGenero int NOT NULL IDENTITY,
+  NombreGenero varchar(10) NOT NULL,
+  PRIMARY KEY (idGenero)
+);
+
+--
+-- Table structure for table etnia
+--
+
+CREATE TABLE etnia (
+  idEtnia int NOT NULL IDENTITY,
+  NombreEtnia varchar(20) NOT NULL,
+  PRIMARY KEY (idEtnia)
+);
+
+--
+-- Table structure for table idioma
+--
+
+CREATE TABLE idioma (
+  idIdioma int NOT NULL IDENTITY,
+  NombreIdioma varchar(30) NOT NULL,
+  PRIMARY KEY (idIdioma)
+);
+
+--
+-- Table structure for table profesionpersona
+--
+
+CREATE TABLE profesionpersona (
+  idProfesion int NOT NULL IDENTITY,
+  NombreProfesion varchar(50) NOT NULL,
+  PRIMARY KEY (idProfesion)
+);
+
+--
+-- Table structure for table tiposangre
+--
+
+CREATE TABLE tiposangre (
+  idTipoSangre int NOT NULL IDENTITY,
+  NombreTipoSangre varchar(15) NOT NULL,
+  PRIMARY KEY (idTipoSangre)
+);
+
+--
+-- Table structure for table estadocivil
+--
+
+CREATE TABLE estadocivil (
+  idEstadoCivil int NOT NULL IDENTITY,
+  NombreEstadoCivil varchar(10) NOT NULL,
+  PRIMARY KEY (idEstadoCivil)
+);
+
+--
+-- Table structure for table departamento
+--
+
+CREATE TABLE departamento (
+  idDepartamento int NOT NULL IDENTITY,
+  NombreDepartamento varchar(45) NOT NULL,
+  PRIMARY KEY (idDepartamento)
+);
+
+--
+-- Table structure for table municipio
+--
+
+CREATE TABLE municipio (
+  idMunicipio int NOT NULL IDENTITY,
+  NombreMunicipio varchar(45) NOT NULL,
+  idDepartamento int NOT NULL,
+  PRIMARY KEY (idMunicipio),
+  CONSTRAINT idDepartamento_fk FOREIGN KEY (idDepartamento) REFERENCES departamento (idDepartamento) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+--
+-- Table structure for table direccion
+--
+
+CREATE TABLE direccion (
+  idDireccion int NOT NULL IDENTITY,
+  Calle varchar(15) NOT NULL,
+  Colonia_Sector varchar(45) NOT NULL,
+  idMunicipio int NOT NULL,
+  PRIMARY KEY (idDireccion),
+  CONSTRAINT idMunicipio_fk FOREIGN KEY (idMunicipio) REFERENCES municipio (idMunicipio) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+--
+-- Table structure for table paciente
+--
+
+CREATE TABLE paciente (
+  idPaciente int NOT NULL IDENTITY,
+  DNI varchar(15) NOT NULL,
+  Nombre varchar(15) NOT NULL,
+  Apellido varchar(15) NOT NULL,
+  Telefono varchar(15) NOT NULL,
+  FechaNacimiento date NOT NULL,
+  idDireccion int NOT NULL,
+  idIdioma int NOT NULL,
+  idEtnia int NOT NULL,
+  idGenero int NOT NULL,
+  idEstadoCivil int NOT NULL,
+  idProfesion int NOT NULL,
+  idTipoSangre int NOT NULL,
+  PRIMARY KEY (idPaciente),
+  CONSTRAINT idDireccion_fk FOREIGN KEY (idDireccion) REFERENCES direccion (idDireccion) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT idEstadoCivil_fk FOREIGN KEY (idEstadoCivil) REFERENCES estadocivil (idEstadoCivil) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT idEtnia_fk FOREIGN KEY (idEtnia) REFERENCES etnia (idEtnia) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT idGenero_fk FOREIGN KEY (idGenero) REFERENCES genero (idGenero) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT idIdioma_fk FOREIGN KEY (idIdioma) REFERENCES idioma (idIdioma) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT idProfesion_fk FOREIGN KEY (idProfesion) REFERENCES profesionpersona (idProfesion) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT idTipoSangre_fk FOREIGN KEY (idTipoSangre) REFERENCES tiposangre (idTipoSangre) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+--
+-- Table structure for table tipogravedad
+--
+
+CREATE TABLE tipogravedad (
+  idTipoGravedad int NOT NULL IDENTITY,
+  NombreTipoGravedad varchar(20) NOT NULL,
+  PRIMARY KEY (idTipoGravedad)
+);
+
+--
+-- Table structure for table historia
+--
+
+CREATE TABLE historia (
+  idHistoria int NOT NULL IDENTITY,
+  FechaEntrada date NOT NULL,
+  FechaAlta date NOT NULL,
+  idPaciente int NOT NULL,
+  idTipoGravedad int NOT NULL,
+  PRIMARY KEY (idHistoria),
+  CONSTRAINT idPaciente_fk FOREIGN KEY (idPaciente) REFERENCES paciente (idPaciente) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT idTipoGravedad_fk FOREIGN KEY (idTipoGravedad) REFERENCES tipogravedad (idTipoGravedad) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+--
+-- Table structure for table planta
+--
+
+CREATE TABLE planta (
+  idPlanta int NOT NULL IDENTITY,
+  NombrePlanta varchar(8) NOT NULL,
+  NumeroHabitaciones int NOT NULL,
+  PRIMARY KEY (idPlanta)
+);
+--
+-- Table structure for table habitacion
+--
+
+CREATE TABLE habitacion (
+  idHabitacion int NOT NULL IDENTITY,
+  NumeroCamas int NOT NULL,
+  idPlanta int NOT NULL,
+  PRIMARY KEY (idHabitacion),
+  CONSTRAINT idPlanta_fk FOREIGN KEY (idPlanta) REFERENCES planta (idPlanta) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+--
+-- Table structure for table tipocama
+--
+
+CREATE TABLE tipocama (
+  idTipoCama int NOT NULL IDENTITY,
+  NombreTipoCama varchar(45) NOT NULL,
+  PRIMARY KEY (idTipoCama)
+);
+
+--
+-- Table structure for table cama
+--
+
+CREATE TABLE cama (
+  idCama int NOT NULL IDENTITY,
+  idHabitacion int NOT NULL,
+  idTipoCama int NOT NULL,
+  PRIMARY KEY (idCama),
+  CONSTRAINT idHabitacion_fk FOREIGN KEY (idHabitacion) REFERENCES habitacion (idHabitacion) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT idTipoCama_fk FOREIGN KEY (idTipoCama) REFERENCES tipocama (idTipoCama) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+--
+-- Table structure for table pacientecama
+--
+
+CREATE TABLE pacientecama (
+  idPacienteCama int NOT NULL IDENTITY,
+  FechaAsignacion date NOT NULL,
+  idCama int NOT NULL,
+  idHistoria int NOT NULL,
+  PRIMARY KEY (idPacienteCama),
+  CONSTRAINT idCama_fk FOREIGN KEY (idCama) REFERENCES cama (idCama) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT idHistoria_fk FOREIGN KEY (idHistoria) REFERENCES historia (idHistoria) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+--
+-- Table structure for table diagnostico
+--
+
+CREATE TABLE diagnostico (
+  idDiagnostico int NOT NULL IDENTITY,
+  NombreDiagnostico varchar(20) NOT NULL,
+  PRIMARY KEY (idDiagnostico)
+);
+
+--
+-- Table structure for table cargo
+--
+
+CREATE TABLE cargo (
+  idCargo int NOT NULL IDENTITY,
+  NombreCargo varchar(15) NOT NULL,
+  Sueldo int NOT NULL,
+  PRIMARY KEY (idCargo)
+);
+
+--
+-- Table structure for table profesionmedico
+--
+
+CREATE TABLE profesionmedico (
+  idProfesion int NOT NULL IDENTITY,
+  NombreProfesion varchar(50) NOT NULL,
+  PRIMARY KEY (idProfesion)
+);
+
+--
+-- Table structure for table jornada
+--
+
+CREATE TABLE jornada (
+  idJornada int NOT NULL IDENTITY,
+  NombreJornada varchar(15) NOT NULL,
+  PRIMARY KEY (idJornada)
+);
+
+--
+-- Table structure for table categoriaespecialidad
+--
+
+CREATE TABLE categoriaespecialidad (
+  idCategoriaEspecialidad int NOT NULL IDENTITY,
+  NombreCategoriaEspecialidad varchar(50) NOT NULL,
+  PRIMARY KEY (idCategoriaEspecialidad)
+);
+
+
+
+
+--
+-- Table structure for table especialidad
+--
+CREATE TABLE especialidad (
+  idEspecialidad int NOT NULL IDENTITY,
+  NombreEspecialidad varchar(45) NOT NULL,
+  idCategoriaEspecialidad int NOT NULL,
+  PRIMARY KEY (idEspecialidad),
+  CONSTRAINT idCategoriaEspecialidad_fk FOREIGN KEY (idCategoriaEspecialidad) REFERENCES categoriaespecialidad (idCategoriaEspecialidad) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+--
+-- Table structure for table medico
+--
+
+CREATE TABLE medico (
+  idMedico int NOT NULL IDENTITY,
+  Nombre varchar(15) NOT NULL,
+  Apellido varchar(15) NOT NULL,
+  No_Colegiado varchar(5) NOT NULL,
+  idEspecialidad int NOT NULL,
+  idProfesion int NOT NULL,
+  idCargo int NOT NULL,
+  idJornada int NOT NULL,
+  PRIMARY KEY (idMedico),
+  CONSTRAINT idCargo_fk FOREIGN KEY (idCargo) REFERENCES cargo (idCargo) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT idEspecialidad_fk FOREIGN KEY (idEspecialidad) REFERENCES especialidad (idEspecialidad) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT idJornada_fk FOREIGN KEY (idJornada) REFERENCES jornada (idJornada) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT idProfesion_fk2 FOREIGN KEY (idProfesion) REFERENCES profesionmedico (idProfesion) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+--
+-- Table structure for table visitamedica
+--
+
+CREATE TABLE visitamedica (
+  idVisitaMedica int NOT NULL IDENTITY,
+  FechaVisita date NOT NULL,
+  idPacienteCama int NOT NULL,
+  idMedico int NOT NULL,
+  idDiagnostico int NOT NULL,
+  PRIMARY KEY (idVisitaMedica),
+  CONSTRAINT idDiagnostico_fk FOREIGN KEY (idDiagnostico) REFERENCES diagnostico (idDiagnostico) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT idMedico_fk FOREIGN KEY (idMedico) REFERENCES medico (idMedico) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT idPacienteCama_fk FOREIGN KEY (idPacienteCama) REFERENCES pacientecama (idPacienteCama) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+
